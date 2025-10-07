@@ -17,7 +17,7 @@ Keterlambatan respon pemerintah akibat tidak adanya sistem pemantauan terpadu.
 
 
 Jenis Web
-Pansosan (Pantau sosial Keluhan) platform berbasis web yang mengumpulkan keluhan masyarakat yang tersebar di sosial media dan membantu pemerintah untuk meninjau data-data laporan keluhan yang belum ditangani secara langsung. Tujuan utamanya yaitu menerapkan Sistem Deteksi Dini (Early Warning System) yang dimana untuk mengkategorikan sifat data tersebut secara terstruktur mulai dari, Aduan, Pelayanan Publik & Infrastruktur, Layanan Digital, Pemerintahan & Kebijakan Publik.
+Pansosan (Pantau sosial Keluhan) platform berbasis web yang mengumpulkan keluhan masyarakat yang tersebar di sosial media dan membantu pemerintah untuk meninjau data-data laporan keluhan yang belum ditangani secara langsung. Tujuan utamanya yaitu menerapkan Sistem Deteksi Dini (Early Warning System) yang dimana untuk mengkategorikan sektor data tersebut secara terstruktur mulai dari Pelayanan Publik & Infrastruktur, Layanan Digital, Pemerintahan & Kebijakan Publik.
 
 
 Fitur yang digunakan:
@@ -28,5 +28,3 @@ Menggunakan Natural Language Processing (NLP) untuk:
 Mengenali kategori masalah sosial dari isi laporan.
 3.Manajemen dan Verifikasi Laporan
 Meninjau laporan masuk (valid/hoaks/spam).
-4.AI Alert System
- misalnya lonjakan keluhan kategori tertentu, sistem secara otomatis mengirimkan peringatan dini (early warning) ke admin melalui notifikasi dashboard atau email.
