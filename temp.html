@@ -37,7 +37,7 @@
   <!-- HERO -->
   <section id="home" class="hero d-flex align-items-center">
     <div class="container text-center" data-aos="fade-up">
-      <h1 class="display-4 fw-bold">Pantauan Keluhan</h1>
+      <h1 class="display-4 fw-bold">AI-BASED PUBLIC COMPLAINT</h1>
       <p class="lead">Pantauan keluhan masyarakat berbasis AI dan data real-time untuk mencegah masalah sosial sejak dini.</p>
       <a href="#data" class="btn btn-warning btn-lg px-4 me-3"><i class="fas fa-chart-pie me-2"></i>Lihat Data</a>
     </div>
@@ -129,6 +129,29 @@
         </div>
       </div>
       </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="contact" class="py-5 bg-success text-white">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="fw-bold mb-4">Laporkan Keluhan Anda</h2>
+      <p class="mb-5">Suara Anda membantu kami memahami dan menyelesaikan masalah sosial lebih cepat.</p>
+
+      <form id="contactForm" class="row g-3 justify-content-center">
+        <div class="col-md-5">
+          <input type="text" class="form-control" id="name" placeholder="" required />
+        </div>
+        <div class="col-md-5">
+          <input type="email" class="form-control" id="email" placeholder="" required />
+        </div>
+        <div class="col-10">
+          <textarea class="form-control" id="message" rows="4" placeholder="Tulis keluhan Anda..." required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-warning px-5 mt-2">Kirim</button>
+        </div>
+      </form>
     </div>
   </section>
 
@@ -251,6 +274,13 @@ setInterval(() => {
       realtimeChart.data.datasets[0].data.push(Math.floor(Math.random() * 100));
       realtimeChart.update();
 
+
+      // ==== CONTACT FORM ====
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Terima kasih! Keluhan Anda telah dikirim.');
+  e.target.reset();
+});
       // Tambah feed baru
       const now = new Date().toLocaleTimeString();
       const keluhanList = [
