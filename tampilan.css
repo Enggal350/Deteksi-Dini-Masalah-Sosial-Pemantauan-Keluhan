@@ -1,0 +1,28 @@
+body {
+  background: #f7faf8;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+  color: #198754;
+}
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(25, 135, 84, 0.1);
+  transition: 0.3s;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.modal-content {
+  border-radius: 10px;
+}
