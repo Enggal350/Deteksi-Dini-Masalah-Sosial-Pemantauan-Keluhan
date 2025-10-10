@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pansosan Web Masyarakat</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="temp.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="fas fa-leaf me-2"></i>Pantauan Sosial Keluhan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i>Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="#data"><i class="fas fa-chart-pie me-1"></i>Data</a></li>
+        </ul>
+    </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero d-flex align-items-center">
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="display-4 fw-bold">Pantauan Keluhan</h1>
+      <p class="lead">Pantauan keluhan masyarakat berbasis AI dan data real-time untuk mencegah masalah sosial sejak dini.</p>
+      <a href="#data" class="btn btn-warning btn-lg px-4 me-3"><i class="fas fa-chart-pie me-2"></i>Lihat Data</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-light text-center">
+    <div class="container" data-aos="fade-up">
+      <h2 class="fw-bold text-success mb-4">Mengapa Deteksi Dini Penting?</h2>
+      <p class="lead">Dengan memantau keluhan sejak dini, kita ubah data menjadi aksi nyata untuk masyarakat.</p>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <i class="fas fa-brain fa-3x text-success mb-3"></i>
+          <h5>AI Analisis</h5>
+          <p>Teknologi AI canggih untuk analisis cepat dan akurat.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <i class="fas fa-users fa-3x text-success mb-3"></i>
+          <h5>Kolaborasi Publik</h5>
+          <p>Libatkan masyarakat dalam pelaporan dan solusi.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <i class="fas fa-chart-line fa-3x text-success mb-3"></i>
+          <h5>Insight Cepat</h5>
+          <p>Dapatkan insight real-time untuk tindakan cepat.</p>
+        </div>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center text-success fw-bold mb-5">Fitur Unggulan</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow feature-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-search fa-3x text-success mb-3"></i>
+              <h5>Pantauan Real-Time</h5>
+              <p>Data diambil otomatis dari media sosial & aduan masyarakat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow feature-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-brain fa-3x text-success mb-3"></i>
+              <h5>AI Deteksi Keluhan</h5>
+              <p>Prediksi potensi masalah sosial berbasis AI terhadap keluhan masyarakat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow feature-card h-100 text-center">
+            <div class="card-body">
+              <i class="fas fa-chart-pie fa-3x text-success mb-3"></i>
+              <h5>Visualisasi Data</h5>
+              <p>Grafik interaktif dari hasil labeling keluhan masyarakat.</p>
+            </div>
+          </div>
+  </section>
+  
+
+  <!-- DATA (CHART SECTION) -->
+  <section id="data" class="py-5 bg-white">
+    <div class="container" data-aos="fade-up">
+      <h2 class="fw-bold text-success text-center mb-4">Insight Data Label Studio</h2>
+      <p class="text-center text-muted mb-5">Distribusi dan tren data keluhan masyarakat berdasarkan hasil labeling AI.</p>
+      <h4 class="text-center">Jumlah Keluhan Real-time: <span id="jumlahKeluhan">750</span></h4>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="chart-container bg-light p-4 rounded-4 shadow">
+            <h5 class="chart-title">Distribusi Label Keluhan</h5>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="chart-container bg-light p-4 rounded-4 shadow">
+            <h5 class="text-center text-success mb-3">Tren Keluhan per Bulan (2025)</h5>
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+        <div class="col-md-4">
+        <div class="chart-box">
+          <h6 class="text-center mb-3">Tren Keluhan Real-time</h6>
+          <canvas id="realtimeChart"></canvas>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feed-box">
+          <h6 class="text-center text-success mb-3">Feed Keluhan Terbaru</h6>
+          <div id="feedKeluhan"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Deteksi Dini Sosial. Dibuat dengan ❤️ untuk masyarakat.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    AOS.init();
+
+    // PIE CHART
+     const pieCtx = document.getElementById('pieChart').getContext('2d');
+    const kategori = ['Pelayanan Publik', 'Infrastruktur', 'Sosial & Ekonomi', 'Pendidikan', 'Ketertiban', 'Lingkungan'];
+    const dataPie = [254, 228, 115, 56, 54, 43];
+    const warnaPie = [
+      'rgba(40,167,69,0.9)',
+      'rgba(255,193,7,0.9)',
+      'rgba(23,162,184,0.9)',
+      'rgba(220,53,69,0.9)',
+      'rgba(111,66,193,0.9)',
+      'rgba(255,87,34,0.9)'
+    ];
+
+    const pieChart = new Chart(pieCtx, {
+      type: 'doughnut',
+      data: {
+        labels: kategori,
+        datasets: [{
+          data: dataPie,
+          backgroundColor: warnaPie,
+          borderWidth: 2,
+          borderColor: '#fff'
+        }]
+      },
+      options: {
+        responsive: true,
+        cutout: '55%',
+        animation: { duration: 1200, easing: 'easeInOutCubic' },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 13 } } },
+          tooltip: {
+            backgroundColor: '#212529',
+            titleColor: '#fff',
+            bodyColor: '#fff',
+            cornerRadius: 8
+          }
+        },
+        cutout: '50%'
+      }
+    });
+
+    // BAR CHART
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt'],
+        datasets: [{
+          label: 'Jumlah Keluhan',
+          data: [40, 35, 50, 60, 75, 80, 95, 110, 120, 90, 85, 100],
+          backgroundColor: '#28a745'
+        }]
+        
+      },
+      options: {
+        scales: { y: { beginAtZero: true } },
+        responsive: true
+      }
+    });
+    
+setInterval(() => {
+  const newKeluhan = Math.floor(Math.random() * 3); // 0–2 keluhan baru tiap update
+  totalKeluhan += newKeluhan;
+  document.getElementById('jumlahKeluhan').innerText = totalKeluhan;
+}, 3000);
+
+// --- CHART REAL-TIME (GARIS BERGERAK) ---
+    const realtimeCtx = document.getElementById('realtimeChart');
+    const realtimeData = {
+      labels: Array.from({length: 20}, (_, i) => i),
+      datasets: [{
+        label: 'Keluhan per Detik',
+        data: Array(20).fill(50),
+        borderColor: '#198754',
+        borderWidth: 2,
+        fill: true,
+        backgroundColor: 'rgba(25,135,84,0.1)',
+        tension: 0.4
+      }]
+    };
+
+    const realtimeChart = new Chart(realtimeCtx, {
+      type: 'line',
+      data: realtimeData,
+      options: {
+        animation: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, max: 100 } }
+      }
+    });
+    
+
+    // --- FEED & JUMLAH KELUHAN ---
+    let totalKeluhan = 750;
+    const feedBox = document.getElementById('feedKeluhan');
+
+    setInterval(() => {
+      const random = Math.floor(Math.random() * 6);
+      totalKeluhan += random;
+      document.getElementById('jumlahKeluhan').textContent = totalKeluhan;
+
+      // Update real-time chart
+      realtimeChart.data.datasets[0].data.shift();
+      realtimeChart.data.datasets[0].data.push(Math.floor(Math.random() * 100));
+      realtimeChart.update();
+
+      // Tambah feed baru
+      const now = new Date().toLocaleTimeString();
+      const keluhanList = [
+        "Jalan rusak di Karanganyar.",
+        "Pelayanan publik lambat di Kecamatan Bojongsari.",
+        "Lampu jalan mati di Bobotsari.",
+        "Sampah menumpuk di Pasar Purbalingga.",
+        "PDAM mati total di Desa Kalimanah.",
+        "Jembatan licin menyebabkan kecelakaan."
+      ];
+      const keluhan = keluhanList[Math.floor(Math.random() * keluhanList.length)];
+      const item = document.createElement('div');
+      item.className = 'feed-item';
+      item.textContent = `${keluhan} (${now})`;
+      feedBox.prepend(item);
+
+      if (feedBox.children.length > 8) feedBox.removeChild(feedBox.lastChild);
+
+    pieChart.data.datasets[0].data = pieChart.data.datasets[0].data.map(v => {
+        let delta = Math.floor(Math.random() * 20 - 10);
+        let newVal = Math.max(10, v + delta);
+        return newVal;
+      });
+      pieChart.update();
+    }, 3000);
+
+  </script>
+</body>
+</html>
