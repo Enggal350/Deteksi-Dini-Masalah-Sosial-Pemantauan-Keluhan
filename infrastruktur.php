@@ -21,13 +21,10 @@
             if ($item['kategori'] === 'Infrastruktur'):
           ?>
           <tr>
-            <th></th>
-            <th></th>
+            
             <th><?php echo $item ['kategori']?> </th>
             <th><?php echo $item ['text']?></th>
-            <th></th>
-            <th></th>
-            <th></th>
+            
           </tr>
           <?php endif; ?>
           <?php } ?>
