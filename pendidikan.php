@@ -19,16 +19,13 @@
            </thead>
           <?php 
           foreach($data as $item) {
-            if ($item['kategori'] === 'Pendidikan'):
+            if ($item['kategori'] === 'Pendidikan' ):
           ?>
           <tr>
-            <th></th>
-            <th></th>
+           
             <th><?php echo $item ['kategori']?> </th>
             <th><?php echo $item ['text']?></th>
-            <th></th>
-            <th></th>
-            <th></th>
+           
           </tr>
           <?php endif; ?>
           <?php } ?>
