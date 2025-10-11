@@ -73,12 +73,6 @@ def classify():
                 'kategori': pred_kategori,
                 "probabilitas_kategori":probabilitas_kategori
             })
-        else: 
-            results.append({
-                'text': text,
-                'aduan': False,
-                'probabilitas_aduan':probabilitas_aduan
-            })
     return jsonify(results)
 @app.route("/latest", methods=["GET"])
 def latest():
