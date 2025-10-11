@@ -8,13 +8,10 @@
       <table class="table table-striped table-hover align-middle text-center">
         <thead class="table-success">
           <tr>
-            <th>No</th>
-            <th>Nama</th>
+            
             <th>Kategori</th>
             <th>Isi Aduan</th>
-            <th>Tanggal</th>
-            <th>Status</th>
-            <th>Aksi</th>
+            
           </tr>
         </thead>
           <?php 
@@ -22,13 +19,10 @@
             if ($item['kategori'] === 'Ketertiban'):
           ?>
           <tr>
-            <th></th>
-            <th></th>
+           
             <th><?php echo $item ['kategori']?> </th>
             <th><?php echo $item ['text']?></th>
-            <th></th>
-            <th></th>
-            <th></th>
+           
           </tr>
           <?php endif; ?>
           <?php } ?>
