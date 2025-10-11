@@ -29,6 +29,7 @@
           <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home me-1"></i>Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle me-1"></i>Tentang</a></li>
           <li class="nav-item"><a class="nav-link" href="#data"><i class="fas fa-chart-pie me-1"></i>Data</a></li>
+          <li class="nav-item"><a class="nav-link" href="tampilan.php"><i class="fas fa-chart-pie me-1"></i>Aduan</a></li>
         </ul>
     </div>
     </div>
@@ -133,27 +134,7 @@
   </section>
 
   <!-- KONTAK -->
-  <section id="contact" class="py-5 bg-success text-white">
-    <div class="container text-center" data-aos="fade-up">
-      <h2 class="fw-bold mb-4">Laporkan Keluhan Anda</h2>
-      <p class="mb-5">Suara Anda membantu kami memahami dan menyelesaikan masalah sosial lebih cepat.</p>
-
-      <form id="contactForm" class="row g-3 justify-content-center">
-        <div class="col-md-5">
-          <input type="text" class="form-control" id="name" placeholder="" required />
-        </div>
-        <div class="col-md-5">
-          <input type="email" class="form-control" id="email" placeholder="" required />
-        </div>
-        <div class="col-10">
-          <textarea class="form-control" id="message" rows="4" placeholder="Tulis keluhan Anda..." required></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-warning px-5 mt-2">Kirim</button>
-        </div>
-      </form>
-    </div>
-  </section>
+  <?php require_once "klasifikasi.php" ?>
 
   <!-- FOOTER -->
   <footer>
