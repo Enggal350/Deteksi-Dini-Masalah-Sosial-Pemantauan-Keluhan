@@ -32,6 +32,7 @@
         </select>
       </div>
 
+
       <div class="col-md-5 mb-2">
         <label class="fw-semibold mb-1">Cari Aduan:</label>
         <div class="input-group">
@@ -39,34 +40,24 @@
           <input type="text" id="searchInput" class="form-control" placeholder="Ketik untuk mencari aduan...">
         </div>
       </div>
+     
+         <?php require_once "route.php" ?>
+          
+        
+  
 
-      <div class="col-md-3 mt-3 mt-md-0 text-end">
-        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">
-          <i class="fa-solid fa-plus"></i> Tambah Aduan
-        </button>
-      </div>
-    </div>
-
-    <?php require_once "route.php" ?>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="button" id="saveStatusBtn" class="btn btn-warning text-dark">Simpan</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="tampilan.js"></script> -->
+  <script src="tampilan.js"></script>
    <script>
 function goToCategory(value) {
   if (value === "semua") {
-    window.location.href = "./?p=semua" ;
+    window.location.href = "tampilan.php?p=semua";
   } else {
-    window.location.href = "./?p=" + value;
+    window.location.href = "tampilan.php?p=" + value;
   }
 }
 </script>
+
 </body>
 </html>
